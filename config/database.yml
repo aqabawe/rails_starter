@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: rails
+  password: rails
+  pool: 5
+
+development:
+  <<: *default
+  database: poc_development
+
+
+test:
+  <<: *default
+  database: poc_test
